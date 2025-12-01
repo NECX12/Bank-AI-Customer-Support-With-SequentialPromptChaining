@@ -113,8 +113,7 @@ def gemini_llm_call(prompt_text: str) -> str:
         response = client.models.generate_content(
             model=MODEL_NAME,
             contents=prompt_text,
-            config=types.GenerateContentConfig(
-                max_output_tokens=256, 
+            config=types.GenerateContentConfig( 
                 temperature=0.0
             )
         )
